@@ -1,0 +1,27 @@
+---
+title: "Assignment 1: Exploratory Data Analysis Setup" 
+author: "Nick Marcus" 
+date: "2025-05-19"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r load-libraries, message=FALSE,warning=FALSE}
+install.packages("readr", repos = "https://cran.rstudio.com/")
+library(tidyverse)
+library(janitor)
+library(readr)
+```
+## Data Import and Initial Examination
+
+```{r load-data, error=TRUE}
+# Read the CSV file from the raw data folder
+titanic_raw<-read.csv("data/raw/titanic_dataset.csv")
+
+titanic_raw <- readr::read_csv("data/raw/titanic_dataset.csv")
+glimpse(titanic_raw)
+
+
